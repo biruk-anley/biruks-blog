@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import Navbar from './navbar'
+import Home from './home';
+
+
 
 function App() {
+  const content = {
+    titles: "The effect of war on Russia vs Ukrien war on Africa",
+    body: "the war which is held currently affects especialy africa and the reason  for this is most "  +
+      "africa country is dependent on the resources espeically the wheat which is come from ukrien ",
+    footer: "This is all I have",
+    name: "hello"
+  }
+
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar thirdIndex="contact us" />
+      <div className="content">
+       <Home titlepage = {content}/>
+    
+      </div>
     </div>
+    
   );
 }
+
+
+
+
 
 export default App;
